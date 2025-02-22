@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia de Viajes - Mundo Aventura</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado con logo y nombre de la agencia -->
+  <header>
+    <div class="logo">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <a href="index.html"><img src="img/logo.jpg" alt="Logo de Mundo Aventura"></a>
+    </div>
+    <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+  </header>
+
+
+  <!-- Sección principal de presentación -->
+  <main>
+    <section class="presentacion">
+      <h2><span class="cursiva">Roadtrip</span>, viaja con estilo.</h2>
+      <p></p>
+    </section>
+  </main>
+
+  <!-- Galería de imágenes con destinos turísticos -->
+  <section id="destinos " class="galeria seccion">
+    <h2>Destinos Populares</h2>
+    <div class="destinos-container">
+      <figure>
+        <img src="destino1.jpg" alt="París, Francia">
+        <figcaption>París, Francia</figcaption>
+      </figure>
+      <figure>
+        <img src="destino2.jpg" alt="Bali, Indonesia">
+        <figcaption>Bali, Indonesia</figcaption>
+      </figure>
+      <figure>
+        <img src="destino3.jpg" alt="New York, USA">
+        <figcaption>New York, USA</figcaption>
+      </figure>
+      <figure>
+        <img src="destino4.jpg" alt="Santorini, Grecia">
+        <figcaption>Santorini, Grecia</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="servicios seccion">
+    <h2>Servicios</h2>
+    <div class="servicios-container">
+      <div class="servicio">
+        <h3>Paquetes de Viaje</h3>
+        <p>Paquetes personalizados para todo tipo de viajero.</p>
+      </div>
+      <div class="servicio">
+        <h3>Traslados</h3>
+        <p>Servicios de traslado a tu destino de manera cómoda y segura.</p>
+      </div>
+      <div class="servicio">
+        <h3>Alojamiento</h3>
+        <p>Reserva hoteles y alojamientos de calidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de Página con redes sociales y derechos de autor -->
+  <footer>
+    <div class="social">
+      <a href="#" class="icon-facebook">
+        <img src="facebook-icon.png" alt="Facebook">
+      </a>
+      <a href="#" class="icon-twitter">
+        <img src="twitter-icon.png" alt="Twitter">
+      </a>
+      <a href="#" class="icon-instagram">
+        <img src="instagram-icon.png" alt="Instagram">
+      </a>
+    </div>
+    <p>&copy; 2025 Mundo Aventura. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.classList.add('visible');
+      } else {
+        header.classList.remove('visible');
+      }
+    });
+  </script>
+  
+
+
+</body>
+</html>

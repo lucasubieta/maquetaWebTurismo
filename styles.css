@@ -1,0 +1,242 @@
+/* Reset básico y aplicación del Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --blanco: rgb(248, 234, 233);
+    --azul: rgb(0, 61, 74);
+    --letra: 'Pacifico';
+  }
+
+
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  header {
+    background-color: rgba(248, 234, 233);;
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    width: 200px;
+    margin-right: 15px;
+}
+  
+  header {
+    height: fit-content;
+    position: fixed; 
+    padding-left: 4%;
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-100%);  
+    z-index: 1000;         
+  }
+  
+  header.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: var(--azul);
+  }
+  
+
+  
+  nav ul li a {
+    color:var(--azul);
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    border-radius: 5px;
+  }
+  
+  .seccion{
+    height: 100vh;
+    width: 100vw;
+  }
+  /* Sección Principal */
+  main, .hero {
+    padding: 20px;
+    color: white;
+    background-image: url(./img/playa1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+
+  }
+  
+  .cursiva{
+    font-family: var(--letra);
+    color:var(--azul);
+    background-color: var(--blanco);
+    padding: 0 0.8%;
+    border-radius: 15%;
+  }
+ 
+
+  .presentacion{
+    padding-left: 20%;
+    padding-top: 10%;
+    font-size: 280%;
+    color:var(--blanco);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /**
+  /* Galería de Destinos */
+  .galeria {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .galeria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .destinos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .destinos-container figure {
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .destinos-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .destinos-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Sección de Servicios */
+  .servicios {
+    padding: 20px;
+  }
+  
+  .servicios-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .servicio {
+    background-color: #e9ecef;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .servicio:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Sección de Contacto */
+  .contacto {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .contacto form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contacto form label {
+    margin: 10px 0 5px;
+  }
+  
+  .contacto form input,
+  .contacto form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contacto form button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contacto form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Pie de Página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .social a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  
+  footer .social a:hover {
+    opacity: 0.7;
+  }
+  
+  /* Diseño Responsivo */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    .destinos-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .servicios-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  /**

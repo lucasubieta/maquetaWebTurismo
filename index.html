@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Encabezado con logo y nombre de la agencia -->
+
+  <!-- I N I C I O  +  N A V B A R  -->
+
   <header>
     <div class="logo">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -24,16 +26,18 @@
       </nav>
   </header>
 
-
-  <!-- Sección principal de presentación -->
-  <main>
+    <!--botón para regresar arriba-->
+        <button id="btnArriba" class="btn-arriba">↑</button>
+    <!-- / -->
+  
+    <main>
     <section class="presentacion">
       <h2><span class="cursiva">Roadtrip</span>, viaja con estilo.</h2>
       <p></p>
     </section>
   </main>
 
-  <!-- Galería de imágenes con destinos turísticos -->
+  <!-- D E S T I N O S  -->
   <section id="destinos" class="galeria seccion">
     <h2>Destinos Populares</h2>
     <div class="container">
@@ -60,7 +64,7 @@
     </div>
   </section>
 
-  <!-- Sección de Servicios -->
+  <!-- S E R V I C I O S -->
   <section id="servicios" class="servicios seccion">
     <h2>Servicios</h2>
     <div class="servicios-container">
@@ -92,7 +96,7 @@
     </div>
   </section>
 
-  <!-- Formulario de Contacto -->
+  <!-- C O N T A C T O-->
   <section id="contacto"class="contacto seccion">
     <h2>Contacto</h2>
     <section>   
@@ -128,7 +132,7 @@
  
 </section>
 
-  <!-- Pie de Página con redes sociales y derechos de autor -->
+  <!-- F O O T E R  -->
   <footer>
     <div class="social">
       <a href="#" class="icon-facebook">
@@ -145,6 +149,7 @@
   </footer>
 
   <script>
+    //Script para navbar dinamico
     window.addEventListener('scroll', function() {
       const header = document.querySelector('header');
       if (window.scrollY > 100) {
@@ -153,6 +158,22 @@
         header.classList.remove('visible');
       }
     });
+
+    const btnArriba = document.getElementById("btnArriba");
+    
+    //Script para volver arriba, dinamico
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            btnArriba.style.display = "block";
+        } else {
+            btnArriba.style.display = "none";
+        }
+    });
+
+    btnArriba.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
   </script>
   
 

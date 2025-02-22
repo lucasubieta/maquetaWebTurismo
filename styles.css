@@ -9,32 +9,30 @@
   }
 
   /*Constantes */
-  :root {
+:root {
     --blanco: rgb(248, 234, 233);
     --azul: rgb(0, 61, 74);
     --naranja: rgb(255, 89, 5);
     --letra: 'Pacifico';
-  }
+}
 
 
-    body {
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: var(--blanco);
-  }
+}
   
-  header {
+header {
     background-color: var(--blanco);
     display: flex;
     align-items: center;
-  }
-  
-  header .logo img {
-    width: 200px;
-    margin-right: 15px;
 }
-  
+        header .logo img {
+            width: 200px;
+            margin-right: 15px;
+        }
   header {
     height: fit-content;
     position: fixed; 
@@ -46,39 +44,33 @@
     z-index: 1000;     
     border-bottom: 2px solid rgba(255, 88, 5, 0.418);  
   }
-  
-  header.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    header.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
   
 
-  nav ul {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     color: var(--azul);
-  }
+}
+    nav ul li a {
+        color:var(--azul);
+        text-decoration: none;
+        padding: 10px;
+    }
+        nav ul li a:hover {
+            border-radius: 5px;
+            font-weight: bolder;
+            transition: ease-out 3s ease;
+        }
   
-
-  
-  nav ul li a {
-    color:var(--azul);
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav ul li a:hover {
-    border-radius: 5px;
-    font-weight: bolder;
-    transition: ease-out 3s ease;
-  }
-  
-  .seccion{
+.seccion{
     height: 100vh;
     width: 100vw;
-  }
-
+}
     .seccion h2{
         padding-top: 52px;
         color:var(--azul);
@@ -89,7 +81,6 @@
     }
 
 
-  /* Sección Principal */
   main {
     color: white;
     background-image: url(./img/playa1.jpg);
@@ -99,7 +90,6 @@
     width: 100vw;
 
   }
-  
   .cursiva{
     font-family: var(--letra);
     color:var(--azul);
@@ -108,7 +98,6 @@
     border-radius: 15%;
   }
  
-
   .presentacion{
     padding-left: 20%;
     padding-top: 10%;
@@ -117,7 +106,6 @@
   }
 
 
-  /*** Destinos Populares */
 
 .container {
     display: grid;
@@ -134,65 +122,53 @@
     border-radius: 10px;
     text-align: center;
 }
-.tarjeta img {
-    width: 100%;
-    border-radius: 10px;
-    height: 230px;
-    object-fit: cover;
-}
-
-.tarjeta h3 {
-    margin: 10px 0;
-}
+    .tarjeta img {
+        width: 100%;
+        border-radius: 10px;
+        height: 230px;
+        object-fit: cover;
+    }
+    .tarjeta h3 {
+        margin: 10px 0;
+    }
   
 
-
-
-
-
-  /* Sección de Servicios */
-
-  
   .servicios-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     height: 73%;
   }
+    .servicio {
+        color: var(--azul);
+        padding: 20px;
+        margin: 10px;
+        border-radius: 8px;
+        flex: 1 1 300px;
+        transition: transform 0.3s ease;
+    }
+        .servicios img{
+            width: 100%;
+            border-radius: 10px;
+            height: 280px;
+            object-fit: cover;
+            padding-top: 10%;
+        }
+        .servicio a{
+            display: flex;
+            align-items: end;
+            color:rgb(0, 0, 0);
+        }
   
-  .servicio {
-    color: var(--azul);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    flex: 1 1 300px;
-    transition: transform 0.3s ease;
-  }
-  
-  .servicios img{
-    width: 100%;
-    border-radius: 10px;
-    height: 280px;
-    object-fit: cover;
-    padding-top: 10%;
-  }
 
-  .servicio a{
-    display: flex;
-    align-items: end;
-    color:rgb(0, 0, 0);
-  }
-  
-  /* Sección de Contacto */
-  .contacto section{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10% 10%;
-    background-color: var(--azul);
-  }
-  
+.contacto section{
+padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10% 10%;
+background-color: var(--azul);
+}
   .contacto form {
     margin: 10px auto;
     display: flex;
@@ -201,56 +177,71 @@
     color:var(--blanco);
   
 }
+    .contacto form label {
+        margin: 10px 0 5px;
+    }
+        .contacto form input,
+        .contacto form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    .contacto form button {
+        margin-top: 15px;
+        padding: 10px;
+        border: none;
+        background-color: var(--naranja);;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+        .contacto form button:hover {
+            background-color: var(--naranja);
+        }
   
-  .contacto form label {
-    margin: 10px 0 5px;
-  }
-  
-  .contacto form input,
-  .contacto form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .contacto form button {
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    background-color: var(--naranja);;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contacto form button:hover {
-    background-color: var(--naranja);
-  }
-  
-  /* Pie de Página */
+
+
   footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
   }
-  
-  footer img{
-    width: 30px;
-  }
+    footer img{
+        width: 30px;
+    }
 
-  footer .social a {
-    margin: 0 10px;
-    display: inline-block;
-    transition: opacity 0.3s ease;
-  }
+    footer .social a {
+        margin: 0 10px;
+        display: inline-block;
+        transition: opacity 0.3s ease;
+    }
   
-  footer .social a:hover {
-    opacity: 0.7;
-  }
-  
-  /* Diseño Responsivo */
+        footer .social a:hover {
+            opacity: 0.7;
+        }
+  .btn-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--blanco);
+    color: var(--naranja);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+    .btn-arriba:hover {
+        background-color:var(--azul);
+    }
+
+
+
   @media (max-width: 768px) {
     nav ul {
       flex-direction: column;
